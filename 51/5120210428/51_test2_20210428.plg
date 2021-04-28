@@ -1,0 +1,19 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Keil code\51dqj\51_test2_20210428.uvproj
+Project File Date:  04/28/2021
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=46
+"51_test2_20210428" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=46
+creating hex file from "51_test2_20210428"...
+"51_test2_20210428" - 0 Error(s), 0 Warning(s).
