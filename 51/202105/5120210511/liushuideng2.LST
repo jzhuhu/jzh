@@ -1,0 +1,99 @@
+C51 COMPILER V9.01   LIUSHUIDENG2                                                          05/11/2021 20:06:27 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LIUSHUIDENG2
+OBJECT MODULE PLACED IN liushuideng2.OBJ
+COMPILER INVOKED BY: E:\keil\C51\BIN\C51.EXE liushuideng2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          //流水灯右移操作
+   2          //#include<reg52.h>
+   3          //void main()
+   4          //{
+   5          //      unsigned int i=0;
+   6          //      unsigned char cnt=0;
+   7          //      while(1)
+   8          //      {
+   9          //              P2=~(0x01<<cnt);
+  10          //              for(i=0;i<40000;i++);
+  11          //              cnt++;
+  12          //              if(cnt>=8)
+  13          //              {
+  14          //                      cnt=0;
+  15          //              }
+  16          //      }
+  17          //}
+  18          //流水灯左移
+  19          //#include<reg52.h>
+  20          //void main()
+  21          //{
+  22          //      unsigned int i=0;
+  23          //      unsigned char cnt=0;
+  24          //      while(1)
+  25          //      {
+  26          //              P2=~(0x80>>cnt);
+  27          //              for(i=0;i<30000;i++);
+  28          //              cnt++;
+  29          //              if(cnt>=8)
+  30          //              {
+  31          //                      cnt=0;
+  32          //              }
+  33          //      }
+  34          //}
+  35          //多功能流水灯
+  36          //#include<reg52.h>
+  37          //void main()
+  38          //{
+  39          //      unsigned int i=0;
+  40          //      unsigned char dir=0;
+  41          //      unsigned char shift=0x01;
+  42          //      while(1)
+  43          //      {
+  44          //              P2=~shift;
+  45          //              for(i=0;i<30000;i++);
+  46          //              if(dir==0)
+  47          //              {
+  48          //                      shift=shift<<1;
+  49          //                      if(shift==0x80)
+  50          //                      {
+  51          //                              dir=1;
+  52          //                      }
+  53          //              }
+  54          //              else
+  55          //              {
+C51 COMPILER V9.01   LIUSHUIDENG2                                                          05/11/2021 20:06:27 PAGE 2   
+
+  56          //                      shift=shift>>1;
+  57          //                      if(shift==0x01)
+  58          //                      {
+  59          //                              dir=0;
+  60          //                      }
+  61          //              }
+  62          //      }
+  63          
+  64          //}
+  65          #include<reg52.h>
+  66          sbit led=P2^2;
+  67          void main()
+  68          {
+  69   1              while(1)
+  70   1              {
+  71   2                      led=1;
+  72   2              }
+  73   1      
+  74   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      4    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
