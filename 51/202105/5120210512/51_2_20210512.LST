@@ -1,0 +1,59 @@
+C51 COMPILER V9.01   51_2_20210512                                                         05/12/2021 20:39:22 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 51_2_20210512
+OBJECT MODULE PLACED IN 51_2_20210512.OBJ
+COMPILER INVOKED BY: E:\keil\C51\BIN\C51.EXE 51_2_20210512.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          sbit a=P2^2;
+   3          sbit b=P2^3;
+   4          sbit c=P2^4;
+   5          unsigned char code LedChar[]={0x6f,0x7f,0x07,0x7d,0x6d,0x66,0x4f,0x5b,0x06,0x3f};
+   6          void main()
+   7          {
+   8   1              unsigned char cnt=0,sec=0;
+   9   1              a=0;
+  10   1              b=0;
+  11   1              c=0;
+  12   1              TMOD=0x01;
+  13   1              TH0=0xB1;
+  14   1              TL0=0xE0;
+  15   1              TR0=1;
+  16   1              while(1)
+  17   1              {
+  18   2                      if(TF0==1)
+  19   2                      {
+  20   3                              TF0=0;
+  21   3                              TH0=0xB1;
+  22   3                              TL0=0xE0;
+  23   3                              cnt++;
+  24   3                              if(cnt>=50)
+  25   3                              {
+  26   4                                      cnt=0;
+  27   4                                      P0=LedChar[sec];
+  28   4                                      sec++;
+  29   4                                      if(sec>=10)
+  30   4                                      {
+  31   5                                              sec=0;
+  32   5                                      }
+  33   4                              }
+  34   3                      }
+  35   2              }
+  36   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     57    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
