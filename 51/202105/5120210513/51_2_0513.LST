@@ -1,0 +1,90 @@
+C51 COMPILER V9.01   51_2_0513                                                             05/13/2021 20:21:24 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 51_2_0513
+OBJECT MODULE PLACED IN 51_2_0513.OBJ
+COMPILER INVOKED BY: E:\keil\C51\BIN\C51.EXE 51_2_0513.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          sbit a=P2^2;
+   3          sbit b=P2^3;
+   4          sbit c=P2^4;
+   5          unsigned char code LedChar[16]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79
+             -,0x71};
+   6          unsigned char LedBuff[8]={0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff};
+   7          unsigned int cnt=0;
+   8          unsigned char flag=0;
+   9          unsigned char i=0;
+  10          void main()
+  11          {
+  12   1              unsigned int sec=0;
+  13   1              a=0;
+  14   1              b=0;
+  15   1              c=0;
+  16   1              TMOD=0x01;
+  17   1              TH0=0xFC;
+  18   1              TL0=0x18;
+  19   1              TR0=1;
+  20   1              EA=1;
+  21   1              ET0=1;
+  22   1              while(1)
+  23   1              {
+  24   2                              if(flag==1)
+  25   2      
+  26   2                              {
+  27   3                                      flag=0;
+  28   3                                      sec++;
+  29   3                                      LedBuff[0]=LedChar[sec%10];
+  30   3                                      LedBuff[1]=LedChar[sec/10%10];
+  31   3                                      LedBuff[2]=LedChar[sec/100%10];
+  32   3                                      LedBuff[3]=LedChar[sec/1000%10];
+  33   3                                      LedBuff[4]=LedChar[sec/10000%10];
+  34   3                                      LedBuff[5]=LedChar[sec/100000%10];
+  35   3                                      LedBuff[6]=LedChar[sec/1000000%10];
+  36   3                                      LedBuff[7]=LedChar[sec/10000000%10];                                            
+  37   3                              }
+  38   2              }
+  39   1      }
+  40          void InterruptTime0()   interrupt 1
+  41          {
+  42   1              TH0=0xFC;
+  43   1              TL0=0x18;
+  44   1              cnt++;
+  45   1              if(cnt>=1000)
+  46   1              {
+  47   2                      cnt=0;
+  48   2                      flag=1;
+  49   2              }
+  50   1              
+  51   1              P0=0x00;  
+  52   1              switch(i)
+  53   1              {
+  54   2                      case 0:a=0;b=0;c=0;i++;P0=LedBuff[0];break;
+C51 COMPILER V9.01   51_2_0513                                                             05/13/2021 20:21:24 PAGE 2   
+
+  55   2                      case 1:a=1;b=0;c=0;i++;P0=LedBuff[1];break;
+  56   2                      case 2:a=0;b=1;c=0;i++;P0=LedBuff[2];break;
+  57   2                      case 3:a=1;b=1;c=0;i++;P0=LedBuff[3];break;
+  58   2                      case 4:a=0;b=0;c=1;i++;P0=LedBuff[4];break;
+  59   2                      case 5:a=1;b=0;c=1;i++;P0=LedBuff[5];break;
+  60   2                      case 6:a=0;b=1;c=1;i++;P0=LedBuff[6];break;
+  61   2                      case 7:a=1;b=1;c=1;i=0;P0=LedBuff[7];break;
+  62   2                      default:break;
+  63   2              }       
+  64   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    520    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     12       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
