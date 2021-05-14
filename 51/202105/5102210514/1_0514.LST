@@ -1,0 +1,274 @@
+C51 COMPILER V9.01   1_0514                                                                05/14/2021 17:23:21 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 1_0514
+OBJECT MODULE PLACED IN 1_0514.OBJ
+COMPILER INVOKED BY: E:\keil\C51\BIN\C51.EXE 1_0514.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          //#include<reg52.h>
+   2          //sbit a=P2^2;
+   3          //sbit b=P2^3;
+   4          //sbit c=P2^4;
+   5          //unsigned char code LedChar[16]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x
+             -79,0x71} ;
+   6          //unsigned char LedBuff[8]={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+   7          //unsigned int cnt=0;
+   8          //unsigned char flag=0;
+   9          //unsigned char i=0;
+  10          //unsigned long int sec=0;
+  11          //void main()
+  12          //{
+  13          //      a=0;
+  14          //      b=0;
+  15          //      c=0;
+  16          //      TMOD=0x01;
+  17          //      TR0=1;
+  18          //      TH0=0xFC;
+  19          //      TL0=0x18;
+  20          //      EA=1;
+  21          //      ET0=1;
+  22          //      while(1)
+  23          //      {
+  24          //              if(flag==1)
+  25          //              {
+  26          //                      flag=0;
+  27          //                      sec++;
+  28          //                      LedBuff[0]=LedChar[sec%10];
+  29          //                      LedBuff[1]=LedChar[sec/10%10];
+  30          //                      LedBuff[2]=LedChar[sec/100%10];
+  31          //                      LedBuff[3]=LedChar[sec/1000%10];
+  32          //                      LedBuff[4]=LedChar[sec/10000%10];
+  33          //                      LedBuff[5]=LedChar[sec/100000%10];
+  34          //                      LedBuff[6]=LedChar[sec/1000000%10];
+  35          //                      LedBuff[7]=LedChar[sec/10000000%10];
+  36          //              }
+  37          //      }
+  38          //}
+  39          //void InterruptTime()  interrupt 1
+  40          //{
+  41          //      TH0=0xFC;
+  42          //      TL0=0x18;       
+  43          //      cnt++;
+  44          //
+  45          //      if(cnt>=1000)
+  46          //      {
+  47          //              cnt=0;
+  48          //              flag=1;
+  49          //      }
+  50          //      P0=0x00;
+  51          //      switch(i)
+  52          //      {
+  53          //              case 0:a=0;b=0;c=0;i++;P0=LedBuff[0];break;
+  54          //              case 1:a=1;b=0;c=0;i++;P0=LedBuff[1];break;
+C51 COMPILER V9.01   1_0514                                                                05/14/2021 17:23:21 PAGE 2   
+
+  55          //              case 2:a=0;b=1;c=0;i++;P0=LedBuff[2];break;             
+  56          //              case 3:a=1;b=1;c=0;i++;P0=LedBuff[3];break;             
+  57          //              case 4:a=0;b=0;c=1;i++;P0=LedBuff[4];break;             
+  58          //              case 5:a=1;b=0;c=1;i++;P0=LedBuff[5];break;             
+  59          //              case 6:a=0;b=1;c=1;i++;P0=LedBuff[6];break;             
+  60          //              case 7:a=1;b=1;c=1;i=0;P0=LedBuff[7];break;                     
+  61          //      }
+  62          //}
+  63          
+  64          
+  65          //#include<reg52.h>
+  66          //sbit a=P2^2;
+  67          //sbit b=P2^3;
+  68          //sbit c=P2^4;
+  69          //unsigned char code LedChar[16]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x
+             -79,0x71} ;
+  70          //unsigned char LedBuff[8]={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+  71          //unsigned int cnt=0;
+  72          //unsigned char flag=0;
+  73          //unsigned char i=0;
+  74          //unsigned long int sec=0;
+  75          //void main()
+  76          //{
+  77          //      a=0;
+  78          //      b=0;
+  79          //      c=0;
+  80          //      TMOD=0x01;
+  81          //      TR0=1;
+  82          //      TH0=0xFC;
+  83          //      TL0=0x18;
+  84          //      EA=1;
+  85          //      ET0=1;
+  86          //      while(1)
+  87          //      {
+  88          //              if(flag==1)
+  89          //              {
+  90          //                      flag=0;
+  91          //                      sec++;
+  92          //                      LedBuff[0]=LedChar[sec%10];
+  93          //                      LedBuff[1]=LedChar[sec/10%10];
+  94          //                      LedBuff[2]=LedChar[sec/100%10];
+  95          //                      LedBuff[3]=LedChar[sec/1000%10];
+  96          //                      LedBuff[4]=LedChar[sec/10000%10];
+  97          //                      LedBuff[5]=LedChar[sec/100000%10];
+  98          //                      LedBuff[6]=LedChar[sec/1000000%10];
+  99          //                      LedBuff[7]=LedChar[sec/10000000%10];
+ 100          //                      if(sec<=9)
+ 101          //                      {
+ 102          //                              LedBuff[1]=0x00;
+ 103          //                              LedBuff[2]=0x00;
+ 104          //                              LedBuff[3]=0x00;
+ 105          //                              LedBuff[4]=0x00;
+ 106          //                              LedBuff[5]=0x00;
+ 107          //                              LedBuff[6]=0x00;
+ 108          //                              LedBuff[7]=0x00;
+ 109          //                              }
+ 110          //                      else if(sec>9&&sec<=99)
+ 111          //                      {
+ 112          //                              LedBuff[2]=0x00;
+ 113          //                              LedBuff[3]=0x00;
+ 114          //                              LedBuff[4]=0x00;
+ 115          //                              LedBuff[5]=0x00;
+C51 COMPILER V9.01   1_0514                                                                05/14/2021 17:23:21 PAGE 3   
+
+ 116          //                              LedBuff[6]=0x00;
+ 117          //                              LedBuff[7]=0x00;                                
+ 118          //                      }
+ 119          //                      else if(sec>99&&sec<=999)
+ 120          //                      {
+ 121          //                              LedBuff[3]=0x00;
+ 122          //                              LedBuff[4]=0x00;
+ 123          //                              LedBuff[5]=0x00;
+ 124          //                              LedBuff[6]=0x00;
+ 125          //                              LedBuff[7]=0x00;                                
+ 126          //                      }
+ 127          //                      else if(sec>999&&sec<=9999)
+ 128          //                      {
+ 129          //                              LedBuff[4]=0x00;
+ 130          //                              LedBuff[5]=0x00;
+ 131          //                              LedBuff[6]=0x00;
+ 132          //                              LedBuff[7]=0x00;                                
+ 133          //                      }
+ 134          //                      else if(sec>9999&&sec<=99999)
+ 135          //                      {
+ 136          //                              LedBuff[5]=0x00;
+ 137          //                              LedBuff[6]=0x00;
+ 138          //                              LedBuff[7]=0x00;                                
+ 139          //                      }
+ 140          //                      else if(sec>99999&&sec<=999999)
+ 141          //                      {
+ 142          //                              LedBuff[6]=0x00;
+ 143          //                              LedBuff[7]=0x00;                                
+ 144          //                      }
+ 145          //                      else if(sec>999999&&sec<=9999999)
+ 146          //                      {
+ 147          //                              LedBuff[7]=0x00;                                
+ 148          //                      }
+ 149          //              }
+ 150          //      }
+ 151          //}
+ 152          //void InterruptTime()  interrupt 1
+ 153          //{
+ 154          //      TH0=0xFC;
+ 155          //      TL0=0x18;       
+ 156          //      cnt++;
+ 157          //
+ 158          //      if(cnt>=1000)
+ 159          //      {
+ 160          //              cnt=0;
+ 161          //              flag=1;
+ 162          //      }
+ 163          //      P0=0x00;
+ 164          //      switch(i)
+ 165          //      {
+ 166          //              case 0:a=0;b=0;c=0;i++;P0=LedBuff[0];break;
+ 167          //              case 1:a=1;b=0;c=0;i++;P0=LedBuff[1];break;
+ 168          //              case 2:a=0;b=1;c=0;i++;P0=LedBuff[2];break;             
+ 169          //              case 3:a=1;b=1;c=0;i++;P0=LedBuff[3];break;             
+ 170          //              case 4:a=0;b=0;c=1;i++;P0=LedBuff[4];break;             
+ 171          //              case 5:a=1;b=0;c=1;i++;P0=LedBuff[5];break;             
+ 172          //              case 6:a=0;b=1;c=1;i++;P0=LedBuff[6];break;             
+ 173          //              case 7:a=1;b=1;c=1;i=0;P0=LedBuff[7];break;                     
+ 174          //      }
+ 175          //}
+ 176          
+ 177          
+C51 COMPILER V9.01   1_0514                                                                05/14/2021 17:23:21 PAGE 4   
+
+ 178          #include<reg52.h>
+ 179          sbit a=P2^2;
+ 180          sbit b=P2^3;
+ 181          sbit c=P2^4;
+ 182          unsigned char code LedChar[16]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79
+             -,0x71} ;
+ 183          unsigned char LedBuff[8]={0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+ 184          unsigned int cnt=0;
+ 185          unsigned char flag=0;
+ 186          unsigned char i=0;
+ 187          unsigned long int sec=100000000;
+ 188          void main()
+ 189          {
+ 190   1              a=0;
+ 191   1              b=0;
+ 192   1              c=0;
+ 193   1              TMOD=0x10;
+ 194   1              TR1=1;
+ 195   1              TH1=0xFC;
+ 196   1              TL1=0x18;
+ 197   1              EA=1;
+ 198   1              ET1=1;
+ 199   1              while(1)
+ 200   1              {
+ 201   2                      if(flag==1)
+ 202   2                      {
+ 203   3                              flag=0;
+ 204   3                              sec--;
+ 205   3                              LedBuff[0]=LedChar[sec%10];
+ 206   3                              LedBuff[1]=LedChar[sec/10%10];
+ 207   3                              LedBuff[2]=LedChar[sec/100%10];
+ 208   3                              LedBuff[3]=LedChar[sec/1000%10];
+ 209   3                              LedBuff[4]=LedChar[sec/10000%10];
+ 210   3                              LedBuff[5]=LedChar[sec/100000%10];
+ 211   3                              LedBuff[6]=LedChar[sec/1000000%10];
+ 212   3                              LedBuff[7]=LedChar[sec/10000000%10];
+ 213   3                      }
+ 214   2              }
+ 215   1      }
+ 216          void InterruptTime()    interrupt 3
+ 217          {
+ 218   1              TH1=0xFC;
+ 219   1              TL1=0x18;       
+ 220   1              cnt++;
+ 221   1      
+ 222   1              if(cnt>=1000)
+ 223   1              {
+ 224   2                      cnt=0;
+ 225   2                      flag=1;
+ 226   2              }
+ 227   1              P0=0x00;
+ 228   1              switch(i)
+ 229   1              {
+ 230   2                      case 0:a=0;b=0;c=0;i++;P0=LedBuff[0];break;
+ 231   2                      case 1:a=1;b=0;c=0;i++;P0=LedBuff[1];break;
+ 232   2                      case 2:a=0;b=1;c=0;i++;P0=LedBuff[2];break;             
+ 233   2                      case 3:a=1;b=1;c=0;i++;P0=LedBuff[3];break;             
+ 234   2                      case 4:a=0;b=0;c=1;i++;P0=LedBuff[4];break;             
+ 235   2                      case 5:a=1;b=0;c=1;i++;P0=LedBuff[5];break;             
+ 236   2                      case 6:a=0;b=1;c=1;i++;P0=LedBuff[6];break;             
+ 237   2                      case 7:a=1;b=1;c=1;i=0;P0=LedBuff[7];break;                     
+ 238   2              }
+C51 COMPILER V9.01   1_0514                                                                05/14/2021 17:23:21 PAGE 5   
+
+ 239   1      }
+ 240          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    578    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     16    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
