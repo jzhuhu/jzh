@@ -1,0 +1,100 @@
+﻿生成启动时间为 2021/11/6 13:42:47。
+     1>项目“E:\vscode\code\20211106\checksum\checksum\checksum.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sha.cpp
+         sha.cpp
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(3): error C2873: “System”: 符号不能用在 using 声明中
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(4): error C2143: 语法错误 : 缺少“;”(在“.”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(4): error C2873: “System”: 符号不能用在 using 声明中
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(4): error C2059: 语法错误:“.”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(5): error C2143: 语法错误 : 缺少“;”(在“.”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(5): error C2873: “System”: 符号不能用在 using 声明中
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(5): error C2059: 语法错误:“.”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(6): error C2143: 语法错误 : 缺少“;”(在“.”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(6): error C2873: “System”: 符号不能用在 using 声明中
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(6): error C2059: 语法错误:“.”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(11): error C3381: “VerifySHA1::MySHA1”: 只有在用 /clr 选项编译的代码中才有程序集访问说明符
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(13): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(13): error C2146: 语法错误: 缺少“;”(在标识符“Message_Digest1”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(13): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(13): error C2143: 语法错误 : 缺少“;”(在“=”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(13): error C2238: 意外的标记位于“;”之前
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(14): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(14): error C2146: 语法错误: 缺少“;”(在标识符“Message_Digest2”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(14): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(14): error C2086: “int VerifySHA1::MySHA1::UInt32”: 重定义
+                 e:\vscode\code\20211106\checksum\checksum\sha.cpp(13) : 参见“VerifySHA1::MySHA1::UInt32”的声明
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(14): error C2143: 语法错误 : 缺少“;”(在“=”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(14): error C2238: 意外的标记位于“;”之前
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(15): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(15): error C2146: 语法错误: 缺少“;”(在标识符“Message_Digest3”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(15): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(15): error C2086: “int VerifySHA1::MySHA1::UInt32”: 重定义
+                 e:\vscode\code\20211106\checksum\checksum\sha.cpp(13) : 参见“VerifySHA1::MySHA1::UInt32”的声明
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(15): error C2143: 语法错误 : 缺少“;”(在“=”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(15): error C2238: 意外的标记位于“;”之前
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(16): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(16): error C2146: 语法错误: 缺少“;”(在标识符“Message_Digest4”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(16): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(16): error C2086: “int VerifySHA1::MySHA1::UInt32”: 重定义
+                 e:\vscode\code\20211106\checksum\checksum\sha.cpp(13) : 参见“VerifySHA1::MySHA1::UInt32”的声明
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(16): error C2143: 语法错误 : 缺少“;”(在“=”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(16): error C2238: 意外的标记位于“;”之前
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(17): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(17): error C2146: 语法错误: 缺少“;”(在标识符“Message_Digest5”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(17): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(17): error C2086: “int VerifySHA1::MySHA1::UInt32”: 重定义
+                 e:\vscode\code\20211106\checksum\checksum\sha.cpp(13) : 参见“VerifySHA1::MySHA1::UInt32”的声明
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(17): error C2143: 语法错误 : 缺少“;”(在“=”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(17): error C2238: 意外的标记位于“;”之前
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(19): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(19): error C2146: 语法错误: 缺少“;”(在标识符“SHA1CircularShift”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(19): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(19): error C2086: “int VerifySHA1::MySHA1::UInt32”: 重定义
+                 e:\vscode\code\20211106\checksum\checksum\sha.cpp(13) : 参见“VerifySHA1::MySHA1::UInt32”的声明
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(19): error C2061: 语法错误: 标识符“UInt32”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(20): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(22): warning C4183: “SHA1CircularShift”:  缺少返回类型；假定为返回“int”的成员函数
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(24): error C2144: 语法错误:“void”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(33): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(33): error C2146: 语法错误: 缺少“;”(在标识符“SHA1_Append”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(33): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(33): error C2040: “VerifySHA1::MySHA1::UInt32”:“int []”与“int”的间接寻址级别不同
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(33): error C2061: 语法错误: 标识符“byte”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(34): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(100): warning C4183: “SHA1_Append”:  缺少返回类型；假定为返回“int”的成员函数
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(101): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(101): error C2146: 语法错误: 缺少“;”(在标识符“SHA1_Transform”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(101): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(101): error C2040: “VerifySHA1::MySHA1::UInt32”:“int []”与“int”的间接寻址级别不同
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(101): error C2061: 语法错误: 标识符“UInt32”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(102): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(188): warning C4183: “SHA1_Transform”:  缺少返回类型；假定为返回“int”的成员函数
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(189): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(189): error C2146: 语法错误: 缺少“;”(在标识符“SHA1Array”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(189): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(189): error C2061: 语法错误: 标识符“UInt32”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(190): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(199): warning C4183: “SHA1Array”:  缺少返回类型；假定为返回“int”的成员函数
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(201): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(201): error C2146: 语法错误: 缺少“;”(在标识符“MySHA1String”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(201): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(201): error C2086: “int VerifySHA1::MySHA1::string”: 重定义
+                 e:\vscode\code\20211106\checksum\checksum\sha.cpp(189) : 参见“VerifySHA1::MySHA1::string”的声明
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(201): error C2061: 语法错误: 标识符“string”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(202): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(213): warning C4183: “MySHA1String”:  缺少返回类型；假定为返回“int”的成员函数
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(214): error C2144: 语法错误:“int”的前面应有“:”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(214): error C2146: 语法错误: 缺少“;”(在标识符“MySHA1File”的前面)
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(214): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(214): error C2086: “int VerifySHA1::MySHA1::string”: 重定义
+                 e:\vscode\code\20211106\checksum\checksum\sha.cpp(189) : 参见“VerifySHA1::MySHA1::string”的声明
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(214): error C2061: 语法错误: 标识符“string”
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(215): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(223): warning C4183: “MySHA1File”:  缺少返回类型；假定为返回“int”的成员函数
+     1>e:\vscode\code\20211106\checksum\checksum\sha.cpp(224): fatal error C1021: 无效的预处理器命令“region”
+     1>已完成生成项目“E:\vscode\code\20211106\checksum\checksum\checksum.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.72
