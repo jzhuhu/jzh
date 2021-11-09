@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Libraries\CMSIS -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\User -I..\User\eeprom -I..\User\usart
+-I "E:\Keil code\stm32\3220211108\Project\RTE"
+-I E:\keil5\Keil\STM32F1xx_DFP\2.2.0
+-I E:\keil5\ARM\CMSIS\Include
+-D__UVISION_VERSION="514" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o .\objects\bsp_i2c_ee.o --omf_browse .\objects\bsp_i2c_ee.crf --depend .\objects\bsp_i2c_ee.d "..\User\eeprom\bsp_i2c_ee.c"
