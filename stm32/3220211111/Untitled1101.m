@@ -1,0 +1,10 @@
+%z=x^3-y^3+9xy
+clear
+clc
+x=[-100:0.5:100];
+y=[-100:0.5:100];
+[X,Y]=meshgrid(x,y);
+Z=X.^3-Y.^3+9*X.*Y;
+mesh(X,Y,Z);
+figure
+surf(X,Y,Z);
