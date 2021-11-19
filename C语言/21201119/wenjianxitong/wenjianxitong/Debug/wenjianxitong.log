@@ -1,0 +1,13 @@
+﻿生成启动时间为 2021/11/19 20:28:36。
+     1>项目“E:\vscode\code\21201119\wenjianxitong\wenjianxitong\wenjianxitong.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt wenjianxitong.c
+         wenjianxitong.c
+     1>e:\vscode\code\21201119\wenjianxitong\wenjianxitong\wenjianxitong.c(44): error C2232: “->score”: 左操作数有“struct”类型，使用“.”
+     1>e:\vscode\code\21201119\wenjianxitong\wenjianxitong\wenjianxitong.c(46): warning C4305: “=”: 从“double”到“float”截断
+     1>e:\vscode\code\21201119\wenjianxitong\wenjianxitong\wenjianxitong.c(48): warning C4305: “=”: 从“double”到“float”截断
+     1>已完成生成项目“E:\vscode\code\21201119\wenjianxitong\wenjianxitong\wenjianxitong.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.09
